@@ -19,7 +19,7 @@ export default function Signup() {
 
   const onSumbitForm = async (e) => {
     e.preventDefault();
-    const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/auth/login`,
+    const response = await fetch( `${process.env.NEXT_PUBLIC_HOST}/api/auth/signup`,
       {
         method: "POST",
         headers: {
@@ -34,6 +34,7 @@ export default function Signup() {
       router.push('/')
     } else {
       alert("Signup failed.");
+      console.log(data);
     }
   };
   const handleChange = (e) => {
