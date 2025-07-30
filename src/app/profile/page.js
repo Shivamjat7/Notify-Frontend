@@ -68,7 +68,7 @@ export default function Profile() {
       }
     };
     fetchStudent();
-  }, []);
+  }, [router]);
 const branchBatchMap = {
   CSE: ["A1", "A2", "A3", "A4"],
   ECE: ["E1", "E2", "E3", "E4", "E5"],

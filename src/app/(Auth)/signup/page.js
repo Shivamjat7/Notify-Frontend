@@ -228,7 +228,7 @@ export default function Signup() {
               Verify Your Email
             </h3>
             <p className="font-[cursive] text-lg text-slate-600 text-center max-w-md leading-relaxed">
-              We've sent a verification code to your email. Please enter it below to complete your registration.
+              We&apos;ve sent a verification code to your email. Please enter it below to complete your registration.
             </p>
           </div>
           <div className="h-16" />

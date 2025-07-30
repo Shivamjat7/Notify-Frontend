@@ -329,7 +329,7 @@ export default function Login() {
             <div className="flex-grow border-t border-gray-200"></div>
           </div>
           <p className="text-sm text-center text-gray-600">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <a href="/signup" className="text-blue-500 hover:underline font-medium">
               Sign up
             </a>
