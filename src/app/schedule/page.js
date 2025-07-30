@@ -11,7 +11,7 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { GiTestTubes } from "react-icons/gi";
 import { IoSchoolSharp } from "react-icons/io5";
 import { Tag } from 'lucide-react';
-import { FaGraduationCap, FaLayerGroup, FaUsers } from "react-icons/fa";
+
 import Loading from "@/components/Loading";
 
 
@@ -110,7 +110,7 @@ export default function Schedule() {
   return (
     <>
       <Navbar position={"fixed"} />
-      <main className="p-2 pb-16 sm:p-6 mt-16 bg-gradient-to-br from-blue-100 via-white to-pink-100 min-h-screen">
+      <main className="p-2 pb-20 pt-16 sm:p-6 mt-16  min-h-screen">
         <h1 className="text-4xl font-extrabold mb-8 text-center text-blue-800 tracking-tight drop-shadow-sm">
           Weekly Schedule
         </h1>
@@ -125,7 +125,7 @@ export default function Schedule() {
               id="branch"
               value={branch}
               onChange={e => setBranch(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 shadow-sm appearance-none"
+              className="text-gray-700 w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 shadow-sm appearance-none"
             >
               {branches.map(b => <option key={b} value={b}>{b}</option>)}
             </select>
@@ -136,7 +136,7 @@ export default function Schedule() {
               id="semester"
               value={semester}
               onChange={e => setSemester(Number(e.target.value))}
-              className="w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-purple-200 shadow-sm appearance-none"
+              className="text-gray-700 w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-purple-200 shadow-sm appearance-none"
             >
               {semesters.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
@@ -147,16 +147,18 @@ export default function Schedule() {
               id="batch"
               value={batch}
               onChange={e => setBatch(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-pink-200 shadow-sm appearance-none"
+              className="text-gray-700 w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-pink-200 shadow-sm appearance-none"
             >
               {batches.map(b => <option key={b} value={b}>{b}</option>)}
             </select>
           </div>
         </form>
-        <div className="overflow-x-auto rounded-2xl shadow-lg bg-white/80 backdrop-blur-md">
+
+
+        <div className="overflow-x-auto rounded-3xl shadow-lg bg-white/80 backdrop-blur-md">
           {loading ? (
             <div className="min-h-[300px] flex items-center justify-center">
-              <Loading message="Fetching schedule..." />
+              <Loading message="Fetching your schedule..." />
             </div>
           ) : sortedTimes.length > 0 ? (
             <table className="min-w-full table-fixed border-separate text-sm text-gray-700 bg-transparent rounded-xl overflow-hidden border-none">

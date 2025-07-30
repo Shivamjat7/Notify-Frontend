@@ -57,7 +57,7 @@ useEffect(() => {
   return (
     <div
       
-      className="fixed inset-0 bg-gradient-to-br from-blue-200/60 via-indigo-200/60 to-pink-200/60 backdrop-blur-md flex justify-center items-center z-50 px-2 md:px-4"
+      className="fixed inset-0 bg-gradient-to-br from-blue-200/60 via-indigo-200/60 to-pink-200/60 backdrop-blur-md flex justify-center items-center z-[9999] px-2 md:px-4"
     >
       <div
         onClick={(e) => e.stopPropagation()}
