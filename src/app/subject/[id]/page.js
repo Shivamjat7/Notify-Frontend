@@ -96,7 +96,7 @@ export default function SubjectPage() {
       </div>
 
       {/* Header */}
-      <div className="relative z-10 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 sticky top-0 shadow-sm">
+      <div className=" z-10 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 sticky top-0 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center gap-6">
             <button
@@ -280,11 +280,11 @@ export default function SubjectPage() {
                   </div>
                   Class History
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-96 overflow-y-auto pr-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-96 overflow-y-auto p-2">
                   {classLog.map((cls, idx) => (
                     <div
                       key={idx}
-                      className={`group flex items-center justify-between rounded-3xl p-5 border shadow-lg transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/25 transform hover:scale-105 ${
+                      className={`group flex items-center justify-between rounded-3xl p-5 border shadow-lg transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/25 transform hover:scale-101 ${
                         cls.status 
                           ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-200/50 hover:border-green-300' 
                           : 'bg-gradient-to-r from-red-50 to-pink-50 border-red-200/50 hover:border-red-300'

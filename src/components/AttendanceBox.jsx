@@ -71,7 +71,7 @@ const SheduleBox = () => {
   }, []);
 
   return (
-    <div className="flex h-full mt-8 md:mt-10  md:h-[100vh] flex-col items-center px-4 pt-16 pb-16 md:pb-12 md:pt-20 md:px-36 min-h-[60vh] ">
+    <div className="flex h-full mt-8 md:mt-10   flex-col items-center px-4 pt-12 pb-16 md:pb-8 md:pt-16 md:px-36 min-h-[60vh]  ">
       <div className="w-full  max-w-6xl md:max-w-7xl bg-white/90 rounded-3xl shadow-2xl border border-slate-200 p-8 md:p-12">
         {loading ? (
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -100,13 +100,13 @@ const SheduleBox = () => {
                 </div>
                 <h1 className="text-2xl md:text-3xl font-bold text-indigo-800">Today's Schedule</h1>
               </div>
-              <p className="font-[cursive] text-indigo-600 text-sm md:text-base">Your classes for today</p>
+              <p className="font-sans text-indigo-600 text-sm md:text-base">Your classes for Today</p>
             </div>
             
             <div className="flex flex-wrap gap-4 justify-center md:justify-end">
               {show && subjects.length > 0 ? (
                 subjects.map((cls, index) => (
-                  <div key={index} className="transform transition-all duration-200 hover:scale-105 hover:z-10 relative">
+                  <div key={index} className="transform transition-all duration-200 hover:scale-102 hover:z-10 relative">
                     <SubjectCard
                       lectureName={cls.subject}
                       time={cls.time}
@@ -125,8 +125,8 @@ const SheduleBox = () => {
                     </svg>
                   </div>
                   <div className="text-center md:text-left">
-                    <h2 className="text-xl md:text-2xl font-bold text-indigo-800">No Classes Today!</h2>
-                    <p className="text-indigo-600 text-sm">Enjoy your free time!</p>
+                    <h2 className="text-xl md:text-4xl font-bold text-indigo-800">No Classes Today!</h2>
+                    <p className="text-indigo-600 text-s">Enjoy your free time!</p>
                   </div>
                 </div>
               )}

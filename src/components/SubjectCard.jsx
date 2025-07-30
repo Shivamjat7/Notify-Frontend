@@ -49,7 +49,7 @@ const SheduleCard = ({ lectureName, time, location, type, subjectId }) => {
     <div className="relative">
       <div
         onClick={handleCardClick}
-        className="w-100 max-w-sm bg-white/95 rounded-2xl border border-gray-200/50 shadow-2xl hover:shadow-3xl overflow-hidden cursor-pointer"
+        className="w-100 max-w-sm bg-white/95 rounded-2xl border border-gray-200/50 shadow-2xl hover:shadow-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02]"
         style={{
           boxShadow: '0 35px 60px -12px rgba(0, 0, 0, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.1)'
         }}
@@ -71,64 +71,64 @@ const SheduleCard = ({ lectureName, time, location, type, subjectId }) => {
               </div>
             </div>
             <div className="grid justify-center">
-              {/* Mobile: Only icon buttons, large and spaced */}
-              <div className="flex flex-row gap-3 mt-3 sm:hidden">
+              {/* Mobile: Buttons without icons */}
+              <div className="flex flex-row gap-2 mt-3 sm:hidden">
                 <button
-                  className="bg-blue-500 text-white px-2.5 py-1.5 rounded shadow font-semibold hover:bg-blue-600 active:scale-95 transition min-w-[56px] text-sm"
+                  className="px-3 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-300/50 shadow-md shadow-emerald-500/15 hover:from-emerald-500/15 hover:to-teal-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-emerald-500/20 hover:border-emerald-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleMarkAttendance(lectureName, true);
                   }}
                 >
-                  Attended
+                  <span className="font-medium text-emerald-700 text-sm">Attended</span>
                 </button>
                 <button
-                  className="bg-red-500 text-white px-2.5 py-1.5 rounded shadow font-semibold hover:bg-red-600 active:scale-95 transition min-w-[56px] text-sm"
+                  className="px-3 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-rose-500/10 to-pink-500/10 border border-rose-300/50 shadow-md shadow-rose-500/15 hover:from-rose-500/15 hover:to-pink-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-rose-500/20 hover:border-rose-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleMarkAttendance(lectureName, false);
                   }}
                 >
-                  Not
+                  <span className="font-medium text-rose-700 text-sm">Not</span>
                 </button>
                 <button
-                  className="bg-gray-400 text-white px-2.5 py-1.5 rounded shadow font-semibold hover:bg-gray-500 active:scale-95 transition min-w-[56px] text-sm"
+                  className="px-3 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-slate-500/10 to-gray-500/10 border border-slate-300/50 shadow-md shadow-slate-500/15 hover:from-slate-500/15 hover:to-gray-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-slate-500/20 hover:border-slate-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleRemove();
                   }}
                 >
-                  Cancelled
+                  <span className="font-medium text-slate-700 text-sm">Cancelled</span>
                 </button>
               </div>
-              {/* Desktop: Icon+label pill buttons */}
-              <div className="hidden sm:flex flex-row gap-3 mt-3">
+              {/* Desktop: Buttons without icons */}
+              <div className="hidden sm:flex flex-row gap-2 mt-3">
                 <button
-                  className="flex items-center gap-2 bg-blue-500 text-white px-2.5 py-1.5 rounded-full shadow hover:bg-blue-600 active:scale-95 transition font-semibold min-w-[70px] text-sm"
+                  className="px-4 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-300/50 shadow-md shadow-emerald-500/15 hover:from-emerald-500/15 hover:to-teal-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-emerald-500/20 hover:border-emerald-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleMarkAttendance(lectureName,true);
                   }}
                 >
-                  <ThumbsUp className="w-5 h-5" strokeWidth={2.2} /> Attended
+                  <span className="font-medium text-emerald-700 text-base">Attended</span>
                 </button>
                 <button
-                  className="flex items-center gap-2 bg-red-500 text-white px-2.5 py-1.5 rounded-full shadow hover:bg-red-600 active:scale-95 transition font-semibold min-w-[70px] text-sm"
+                  className="px-4 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-rose-500/10 to-pink-500/10 border border-rose-300/50 shadow-md shadow-rose-500/15 hover:from-rose-500/15 hover:to-pink-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-rose-500/20 hover:border-rose-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleMarkAttendance(lectureName, false);
                   }}
                 >
-                  <ThumbsDown className="w-5 h-5" strokeWidth={2.2} /> Not
+                  <span className="font-medium text-rose-700 text-base">Not</span>
                 </button>
                 <button
-                  className="flex items-center gap-2 bg-gray-400 text-white px-2.5 py-1.5 rounded-full shadow hover:bg-gray-500 active:scale-95 transition font-semibold min-w-[70px] text-sm"
+                  className="px-4 py-1.5 rounded-lg transition-all duration-300 bg-gradient-to-r from-slate-500/10 to-gray-500/10 border border-slate-300/50 shadow-md shadow-slate-500/15 hover:from-slate-500/15 hover:to-gray-500/15 hover:scale-[1.02] hover:shadow-lg hover:shadow-slate-500/20 hover:border-slate-300/70 active:scale-[0.98]"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleRemove();
                   }}
                 >
-                  <Ban className="w-5 h-5" strokeWidth={2.2} /> Cancelled
+                  <span className="font-medium text-slate-700 text-base">Cancelled</span>
                 </button>
               </div>
             </div>

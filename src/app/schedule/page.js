@@ -161,7 +161,7 @@ export default function Schedule() {
               <Loading message="Fetching your schedule..." />
             </div>
           ) : sortedTimes.length > 0 ? (
-            <table className="min-w-full table-fixed border-separate text-sm text-gray-700 bg-transparent rounded-xl overflow-hidden border-none">
+            <table className="scrollbar-hidden min-w-full table-fixed border-separate text-sm text-gray-700 bg-transparent rounded-2xl overflow-hidden border-none">
                 <thead className="bg-blue-100 text-blue-800 uppercase text-xs sticky top-0 z-10">
                   <tr>
                     <th className="p-4 text-left font-bold bg-white sticky left-0 z-20 border-none">Day</th>
