@@ -71,7 +71,7 @@ const SheduleBox = () => {
   }, []);
 
   return (
-    <div className="flex h-full mt-8 md:mt-10   flex-col items-center px-4 pt-12 pb-16 md:pb-8 md:pt-16 md:px-36 min-h-[60vh]  ">
+    <div className="flex h-full mt-8 md:mt-10   flex-col items-center px-2 sm:px-8 pt-12 pb-16 md:pb-8 md:pt-16 md:px-36  min-h-screen  ">
       <div className="w-full  max-w-6xl md:max-w-7xl bg-white/90 rounded-3xl shadow-2xl border border-slate-200 p-8 md:p-12">
         {loading ? (
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -84,12 +84,12 @@ const SheduleBox = () => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col lg:flex-row md:items-center md:justify-between">
             <div className="text-center md:min-w-72  mb-8 md:mb-0">
                 <Image 
                   src="/bird.png" 
                   alt="logo" 
-                  className="hidden md:block w-64 md:h-48 lg:w-80 lg:h-60" 
+                  className="hidden lg:block w-64 md:h-48 lg:w-80 lg:h-60" 
                   width={800} 
                   height={600}
                   quality={100}
@@ -103,7 +103,7 @@ const SheduleBox = () => {
               <p className="font-sans text-indigo-600 text-sm md:text-base">Your classes for Today</p>
             </div>
             
-            <div className="flex flex-wrap gap-4 justify-center md:justify-end">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
               {show && subjects.length > 0 ? (
                 subjects.map((cls, index) => (
                   <div key={index} className="transform transition-all duration-200 hover:scale-102 hover:z-10 relative">

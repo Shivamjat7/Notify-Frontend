@@ -155,7 +155,7 @@ const branchBatchMap = {
   return (
     <>
       <Navbar showAttendanceBar={false} position={""} />
-      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-blue-50 to-pink-100 py-10 px-4 flex flex-col items-center">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-blue-50 to-pink-100 pt-8 pb-20 md:py-10 px-4 flex flex-col items-center">
         {loading ? (
           <div className="flex flex-col items-center justify-center h-96">
             <Loading message="Loading your profile..." />
